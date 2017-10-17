@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <title>Javascipt example</title>
+
+<script type="text/javascript">
+function substitute()
+{
+    var myValue=document.getElementById('myTextbox').value;
+    if(myValue.length==0)
+    {
+        alert('Please enter the real value into field')
+        return;
+    }
+    var myTitle=document.getElementById('title');
+    myTitle.innerHTML=myValue;
+
+}
+
+
+
+</script>
+
+
+</head>
+<body onload="alert('Hello World')">
+<h1 id="title">Javascipt fundamental</h1>
+<input type="text" id="myTextbox"/>
+<input type="submit" value="Click me"  onclick="substitute()"/>
+
+</body>
+</html>
