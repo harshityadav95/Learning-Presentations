@@ -1,0 +1,43 @@
+pip install virtualenv
+
+>>virtualenv venv
+
+venv\Scripts\activate
+
+pip install --upgrade pip
+
+pip install django
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+ 86207276
+python manage.py migrate
+
+	python	manage.py	runserver
+
+
+
+	
+mkdir app
+
+django-admin startproject mysite app
+
+python manage.py startapp blog
+
+python manage.py makemigrations blog
+
+
+pip install dj-database-url gunicorn whitenoise
+
+python manage.py migrate blog
+
+python manage.py createsuperuser
+
+
+heroku addons:create heroku-postgresql:hobby-dev --app deploytrials
+
+heroku run bash --app deploytrials
+heroku run python --app reconstruct3
+heroku run python --app reconstruct3 manage.py migrate
+
